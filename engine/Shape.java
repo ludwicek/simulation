@@ -3,6 +3,7 @@ package engine;
 import java.awt.geom.Point2D;
 
 public abstract class Shape implements Drawable {
+	private static final long serialVersionUID = 1L;
 	// v akej maximalnej pozicii sa moze nachadzat (obmedzenie dane rozmermi kresliacej plochy)
 	private Point2D max;
 	private Point2D position;

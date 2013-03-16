@@ -1,6 +1,9 @@
 package nn;
 
-public class Connection {
+import java.io.Serializable;
+
+public class Connection implements Serializable {
+	private static final long serialVersionUID = 2662628995232765330L;
 	private Connectable leftMember;
 	private Connectable rightMember;
 	private double wage;

@@ -1,8 +1,12 @@
 package nn;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class NeuralNetwork {
+public class NeuralNetwork implements Serializable {
+
+	private static final long serialVersionUID = -7660784714001681120L;
+
 	private ArrayList<Layer> layers = new ArrayList<Layer>();
 	
 	private double[] lastOutputs = null;
@@ -38,7 +42,6 @@ public class NeuralNetwork {
 				else {
 					for (m = 0; m < cAblesBefore.size(); m++) {
 						tmp[m] = conns.get(m).getWage()*cAblesBefore.get(m).getLastOutput();
-						//System.out.println(tmp[m]);
 					}					
 				}
 				cAbles.get(j).activate(tmp);

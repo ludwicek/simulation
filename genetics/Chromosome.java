@@ -36,7 +36,7 @@ public class Chromosome {
 		double retCells2[] = new double[cells.length];
 		Random generator = new Random();
 		
-		String tmp = "";
+		//String tmp = "";
 		
 		//ystem.out.println(this.toString());
 		//System.out.println(chromosome.toString());
@@ -45,8 +45,8 @@ public class Chromosome {
 			case GeneticAlgorithm.MASKED_CROSSING: {
 				for (int i = 0; i < mask.length; i++) {
 					mask[i] = generator.nextBoolean();
-					if (mask[i]) tmp += 1;
-					else tmp += 0;
+					//if (mask[i]) tmp += 1;
+					//else tmp += 0;
 				}
 				//System.out.println(tmp);
 				for (int i = 0; i < mask.length; i++) {
@@ -93,10 +93,9 @@ public class Chromosome {
 		}
 		for (int i = 0; i < getCells().length; i++) {
 			if (generator.nextDouble() < rate) {
-				//System.out.println("mutujeeeeeeem");
 				switch(type) {
 					case GeneticAlgorithm.ORDINARY_MUTATION : {
-						cells[i] =  (generator.nextDouble() * (max - min)) - min;
+						cells[i] =  (generator.nextDouble() * (max - min)) + min;
 						break;
 					}
 					case GeneticAlgorithm.ADDITIVE_MUTATION : {

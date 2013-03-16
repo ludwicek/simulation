@@ -1,9 +1,11 @@
 package nn;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import utils.Arrayutil;
 
-public class Neurone implements Connectable {
+public class Neurone implements Connectable, Serializable {
+	private static final long serialVersionUID = -2870674098937446558L;
 	private ArrayList<Connection> connections = new ArrayList<Connection>(); 
 	private ArrayList<Connection> inputConnections = new ArrayList<Connection>();
 	private double lastOutput;

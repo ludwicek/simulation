@@ -1,8 +1,10 @@
 package nn;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Input implements Connectable {
+public class Input implements Connectable, Serializable {
+	private static final long serialVersionUID = -3977364445464939468L;
 	private ArrayList<Connection> connections = new ArrayList<Connection>(); 
 	public Input() {
 		
